@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+</head>
+<body style = 'text-align : center'>
+    {% for post in posts %}
+       <h1> Title : {{post.title}} </h1>
+       <b> Author : {{post.author}} </b>
+       <p> Gmail : {{post.gmail}} </p>
+       <p> Created At: {{post.created_at}} </p>
+       <p> Description : {{post.description}} </p>
+    {% endfor %}
+
+    {% comment %} <script type="text/javascript">
+
+        window.setInterval(function () {
+            location.href = "{% url 'blog' %}";      //refreshes the given url after every 2 seconds
+        }, 2000); 
+
+    </script> {% endcomment %}
+</body>
+</html>

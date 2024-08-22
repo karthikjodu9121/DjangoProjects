@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First App</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body style  = 'text-align : center'>
+    <div >
+        <h1 id="divEle">
+            Hello {{name}}, Django Welcomes You
+        </h1>
+        <button><a href="{% url 'about' %}">About</a></button>
+        <button><a href="{% url 'contact' %}">Contact us</a></button>
+
+        <h2>{% block newBlock %}
+        This is the new Block     
+        {% comment "" %}
+        This is the comment
+        {% endcomment %}
+        {% endblock newBlock %} </h2>
+    </div>
+    The Below is the App Related Files
+    <h1><a href="{% url 'app_home' %} ">Go To Ur App</a></h1>
+    </body>
+
+    {% block content %}
+        This is the block of Home Page 
+    {% endblock content %}
+
+    <button><a href="{% url 'blog' %}">View Blogs</a></button>
+</html>
